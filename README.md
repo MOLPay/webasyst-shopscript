@@ -12,6 +12,12 @@ MOLPay Sdn. Bhd. is not responsible for any problems that might arise from the u
 4. Fill in your MOLPay Merchant ID & MOLPay Verify key into the respective fields.
 5. Click Save to save the configuration and done. 
 
+Notification URL : http://xxxxxxxxxxxxxx/payments.php/molpay/
+
+Callback URL : http://xxxxxxxxxxxxxx/payments.php/molpay/
+
+
+
 # Contribution
 You can contribute to this plugin by sending the pull request to this repository.
 
