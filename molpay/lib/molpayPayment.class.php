@@ -218,7 +218,7 @@ class molpayPayment extends waPayment implements waIPayment
            
         if ($nbcb==1) {
            //callback IPN feedback to notified MOLPay
-             echo "CBTOKEN:MPSTATOK"; exit;
+             echo "CBTOKEN:MPSTATOK";
         }else{
              $_POST[treq]    =    1; // Additional parameter for IPN
 
