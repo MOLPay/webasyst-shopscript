@@ -201,7 +201,7 @@ class molpayPayment extends waPayment implements waIPayment
             )
         );
         
-        $vkey = $this->verifyKey;
+        $vkey = $this->privKey;
         /********************************
         *Don't change below parameters
         ********************************/
@@ -267,15 +267,18 @@ class molpayPayment extends waPayment implements waIPayment
             {
                 $transaction_data['state'] = self::STATE_DECLINED;
                 $r_url = $this->getAdapter()->getBackUrl(waAppPayment::URL_DECLINE, $order);
+                $transaction_data = $this->saveTransaction($transaction_data, $request);
             }
             else if($request['status'] == "22")
             {
                 $transaction_data['state'] = self::STATE_AUTH;
                 $r_url = $this->getAdapter()->getBackUrl(waAppPayment::URL_SUCCESS, $order);
+                $transaction_data = $this->saveTransaction($transaction_data, $request);
             }
         } elseif( $skey != $key1 ){
              $transaction_data['state'] = self::STATE_DECLINED;
              $r_url = $this->getAdapter()->getBackUrl(waAppPayment::URL_DECLINE, $order);
+             $transaction_data = $this->saveTransaction($transaction_data, $request);
         }        
         if (!empty($result['error'])) {
             throw new waPaymentException(
