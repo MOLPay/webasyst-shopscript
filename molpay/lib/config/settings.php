@@ -24,25 +24,18 @@ return array(
         'title'            => /*_wp*/('Merchant ID'),
         'description'      => /*_wp*/('Merchant ID'),
         'control_type'     => waHtmlControl::INPUT
-    ),
-    
-    
-//    'buyerName' => array(
-//        'title'            => /*_wp*/('Buyer Full Name'),
-//        'description'      => /*_wp*/('Buyer Full Name'),
-//        'control_type'     => waHtmlControl::INPUT
-//    ),
-//    
-//    'buyerMobile' => array(
-//        'title'            => /*_wp*/('Buyer Mobile Number'),
-//        'description'      => /*_wp*/('Buyer Mobile Number'),
-//        'control_type'     => waHtmlControl::INPUT
-//    ),
-                          
+    ),     
     
     'verifyKey' => array(
         'title'            => /*_wp*/('Verify Key'),
         'description'      => /*_wp*/('Verify Key'),
         'control_type'     => waHtmlControl::INPUT
     ),
+    
+    'privKey' => array(
+        'title'            => /*_wp*/('private vKey'),
+        'description'      => /*_wp*/('private vKey'),
+        'control_type'     => waHtmlControl::INPUT
+    ),
+
 );
